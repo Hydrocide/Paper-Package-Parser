@@ -24,6 +24,7 @@ for file_name in os.listdir(folder_path):
     md_text = pymupdf4llm.to_markdown(f"{folder_path}\{file_name}")
     print(md_text)
     # Write the text to some file in UTF8-encoding
+    file_name = file_name.replace(".pdf","")        ################    UNTESTED    TODO: TEST
     pathlib.Path(f"Markdowns\{file_name}.md").write_bytes(md_text.encode())
 
 end_time = time.time()
