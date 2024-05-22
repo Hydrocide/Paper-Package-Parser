@@ -9,7 +9,7 @@ def split_markdown_file(input_file, output_dir):
     with open(input_file, 'r', encoding='utf-8') as f:
         lines = f.readlines()
 
-    chapter_num = 0
+    chapter_num = 1
     chapter_lines = []
     for line in lines:
         if line.startswith("######## Chapter "):  # Assuming chapters are denoted by level 1 headings
